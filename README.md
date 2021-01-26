@@ -69,3 +69,10 @@ app.use(express.json());
 1. `git add .` -> `git commit -m ` 
 2. `heroku create`
 3. `git push heroku main`
+4. Add three more scripts to the server package.json
+
+``` javascript
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+```
